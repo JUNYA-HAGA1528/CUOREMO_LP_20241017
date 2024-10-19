@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.section-title__jp{
+    text-align: center;
+    color: $brown;
+    font-size: rem(18);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.marker {
+    position: relative;
+    font-size: rem(22);
+    background: linear-gradient(transparent 60%, #ECE8DC 60%);
+    display: inline-block;
+    @include mq(md) {
+        font-size: rem(38);
+    }
+}
+
+.marker::before,
+.marker::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    background-color: #ECE8DC;
+    width: 5px;
+    @include mq(md) {
+        width: 20px;
+    }
+}
+
+.marker::before {
+    left: -5px;
+    @include mq(md) {
+        left: -20px;
+    }
+}
+
+.marker::after {
+    right: -5px;
+    @include mq(md) {
+        right: -20px;
+    }
+}

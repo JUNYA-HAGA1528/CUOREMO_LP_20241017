@@ -2,28 +2,28 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
+$inner: 1128px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: 0px;
 
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
+$base-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro","メイリオ", "Meiryo", "sans-serif";
+$second-family: "hiragino-kaku-gothic-pron", sans-serif;
+$third-family:"yu-gothic-pr6n", sans-serif;
+$force-family: "Zen Old Mincho", serif;
 // ※検証ツールでしっかり反映されているか確認する
-
-body {
-  font-family: $base-font-family;
-}
 
 // フォントウェイト
 $regular: 300;
 $normal: 400;
+$medium: 500;
+$semiBold: 600;
 $bold: 700;
 
 ////////////////////
@@ -31,5 +31,12 @@ $bold: 700;
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
+$black: #333;
 $white: #fff;
+$brown: #A69564;
+$green: #06C855;
+
+body {
+    font-family: $base-family;
+    color: $black;
+}
