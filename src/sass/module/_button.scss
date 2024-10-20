@@ -1,2 +1,72 @@
 @use "global" as *;
 
+.button a {
+    display: inline-block;
+}
+
+.button__box {
+    position: relative;
+    z-index: 1;
+}
+
+.button__comment {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(307);
+    height: rem(54);
+    z-index: 100;
+}
+
+
+.button__item  {
+    font-family: $second-family;
+    background: $green;
+    position: relative;
+    color: $white;
+    font-size: rem(18);
+    font-weight: $semiBold;
+    padding-right: rem(64);
+    letter-spacing: 0.08em;
+    width: rem(300);
+    height: rem(58);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    @include mq(md) {
+        width: rem(506);
+        height: rem(87);    
+        font-size: rem(32);
+    }
+}
+
+.button__item span::after {
+	background-image: url(../images/common/button-icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(-2);
+    width: rem(42);
+	height: rem(42);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(74);
+        width: rem(42);
+        height: rem(42);
+    }
+}
+
+.button__item:hover{
+    opacity: 0.5;
+}
+
+.button__item:hover span::after {
+    right: rem(60); /* ここで右に移動する値を指定します */
+    transition: 0.4s right; /* rightの移動に対するアニメーション */
+}

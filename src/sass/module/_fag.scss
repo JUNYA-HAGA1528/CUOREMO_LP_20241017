@@ -1,10 +1,24 @@
 @use "global" as *;
 
 .fag{
+    background-color: #FBFAF6;
+    padding: rem(120) 0 rem(120);
+}
+
+.fag--second{
     background-color: #EDE8DC;
     padding: rem(120) 0 rem(110);
 }
 
 .fag__accordion{
     margin-top: rem(79.5);
+}
+
+.fag__accordion--second{
+    margin-top: rem(83);
+}
+
+.fag__buttons{
+    text-align: center;
+    margin-top: rem(115);
 }
