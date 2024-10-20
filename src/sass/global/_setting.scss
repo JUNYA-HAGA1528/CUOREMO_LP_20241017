@@ -2,7 +2,7 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1128px;
+$inner: 1140px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
@@ -17,6 +17,7 @@ $base-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ P
 $second-family: "hiragino-kaku-gothic-pron", sans-serif;
 $third-family:"yu-gothic-pr6n", sans-serif;
 $force-family: "Zen Old Mincho", serif;
+$five-family: 'Didot', serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 // フォントウェイト

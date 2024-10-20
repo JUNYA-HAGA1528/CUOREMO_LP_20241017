@@ -1,0 +1,146 @@
+@use "global" as *;
+
+.accordion__item{
+    background-color: $white;
+    border-radius: rem(27);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.accordion__item + .accordion__item{
+    margin-top: rem(30);
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    color: #5e5e5e;
+    cursor: pointer;
+    padding: rem(22) rem(32) rem(22) rem(38);
+    font-size: rem(16);
+    font-weight: bold;
+}
+
+.accordion__item.active .accordion__header {
+    border-radius: rem(27) rem(27) 0 0; /* 上部の border-radius だけ適用 */
+}
+
+.accordion__item.active .accordion__content {
+    border-radius: 0 0 rem(27) rem(27); /* 下部の border-radius を適用 */
+}
+
+.accordion__item .accordion__header {
+    border-radius: rem(27); /* アコーディオンが閉じたときに全体に適用 */
+}
+
+.accordion__textBox{
+    display: flex;
+    align-items:center;
+    gap: 0 rem(40);
+}
+
+.accordion__textBox--aline{
+    align-items: flex-start;
+}
+
+.accordion__head{
+    font-family: $five-family;
+    color: $brown;
+    font-size: rem(32);
+    font-weight: $regular;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.accordion__question {
+    max-width: rem(954);
+    text-align: left;
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: 2;
+    letter-spacing: 0.03em;
+}
+
+.accordion__question--text{
+    padding-top: rem(2);
+    font-size: rem(16);
+    line-height: calc(27/16);
+}
+
+.accordion__icon {
+    font-size: rem(24);
+    line-height: 1;
+}
+.accordion__border {
+    display: none; /* 初期状態では非表示 */
+}
+
+.accordion__item.active .accordion__border {
+    display: block; /* アコーディオンが開いた時に表示 */
+    border-top: 1px solid $brown;
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+.accordion__content {
+    display: none;
+    padding: rem(34) rem(38) rem(27.5);
+    background-color: #fff;
+    font-size: rem(14);
+    color: #5e5e5e;
+    border-radius: 0 0 rem(8) rem(8);
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__icon,
+.accordion__icon span {
+    display: inline-block;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+
+.accordion__icon {
+    background-color: $brown;
+    position: relative;
+    height: rem(43); /* 円の高さ */
+    width: rem(43);  /* 円の幅 */
+    border-radius: 50%; /* 丸にする */
+    border: 2px solid $brown; /* 外枠の色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion__icon span {
+    background-color: $white; /* 線の色 */
+    height: 1px; /* 線の厚み */
+    width: 50%; /* 円の中に収まる幅 */
+    position: absolute;
+}
+
+.accordion__icon span:nth-of-type(1) {
+    transform: rotate(0deg); /* 横線 */
+    visibility: visible;
+    opacity: 1;
+}
+
+.accordion__icon span:nth-of-type(2) {
+    transform: rotate(90deg); /* 縦線 */
+    visibility: visible;
+    opacity: 1;
+}
+
+.accordion__item.active .accordion__icon span:nth-of-type(1) {
+    visibility: hidden; /* アコーディオンが開いた時に横線を非表示 */
+    opacity: 0;
+}
+
+.accordion__item.active .accordion__icon span:nth-of-type(2) {
+    transform: rotate(0deg); /* アコーディオンが開いた時に縦線を回転させない */
+}
