@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.header{
+    height: rem(87);
+    background-color: $white;
+    position: relative;
+    z-index: 9999;
+}
+
+.header__logo{
+    width: rem(259);
+    height: rem(42);
+    margin: 0 auto;
+    height: inherit;
+}
+
+.header__logo img {
+    height: inherit;
+}

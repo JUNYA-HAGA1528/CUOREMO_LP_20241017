@@ -1,0 +1,98 @@
+@use "global" as *;
+
+.worries{
+    background-color: #EDE8DC;
+    padding: rem(123) 0 rem(122);
+}
+
+
+
+
+
+//リスト
+.worries__list{
+    margin-top: rem(60);
+    @include mq(md){
+        margin-top: rem(90);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.worries__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include mq(md){
+        max-width: calc(33.3333% - 2.8125rem * 2 / 3 );
+        width: 100%;
+    }
+}
+
+.worries__item + .worries__item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(45);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.worries__item:nth-child(3n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.worries__item:nth-child(n + 4){
+    @include mq(md){
+        margin-top: 8.25rem;
+    }
+}
+
+
+.worries__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: rem(53) rem(50) rem(42.2);
+    background-color: $white;
+    border-radius: rem(19);
+}
+
+.worries__subtitle{
+    text-align: center;
+    color: $brown;
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.worries__sentence{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+    margin-top: rem(29);
+}
+
+.worries__text{
+    flex-grow: 1;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(27/16);
+    letter-spacing: 0.03em;
+}
+
+.worries__img{
+    margin-top: rem(30);
+}
+
+.worries__img img {
+    width: 197px;
+    height: 197px;
+    object-fit: cover;
+    margin: 0 auto;
+}

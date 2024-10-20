@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.fv__bg{
+    background-image: url('../images/common/fv.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    margin-top: rem(-87);
+    color: $white;
+    position: relative;
+    z-index: 1;
+    padding-bottom: rem(215);
+}
+
+
+.fv__tab{
+    display: flex;
+    align-items: center;
+    gap: 0 rem(13);
+    text-align: left;
+    padding-top: rem(172);
+}
+
+.fv__ta-item{
+    text-align: center;
+    background-color: $white;
+    color: $brown;
+    display: inline-block;
+    width: rem(123);
+    padding: rem(10.5) 0;
+    font-size: rem(26);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    border-radius: rem(10);
+}
+
+.fv__text{
+    margin-top: rem(27);
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: calc(50/32);
+    letter-spacing: 0.1em;
+}
+
+.fv__title{
+    margin-top: rem(10);
+}
+
+.fv__title span {
+    background-color: #ED9C9B;
+    padding: rem(21) rem(18.5);
+    font-size: rem(52);
+    font-weight: $bold;
+    line-height: calc(120/52);
+    letter-spacing: 0.1em;
+}
+

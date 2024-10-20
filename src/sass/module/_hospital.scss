@@ -1,0 +1,210 @@
+@use "global" as *;
+
+.hospital{
+    text-align: center;
+    padding: rem(120) 0 rem(126);
+    background-color: #FBFAF7;
+}
+
+.hospital__content{
+    border-radius: rem(20);
+    background-color: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hospital__content + .hospital__content{
+    margin-top: rem(102);
+}
+
+.hospital__wrapper{
+    max-width: rem(900);
+    margin: 0 auto;
+    padding: rem(81) 0 rem(107);
+
+}
+
+.hospital__title{
+    background-color: $brown;
+    color: $white;
+    padding: rem(40) 0;
+    font-size: rem(38);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    border-radius: rem(12);
+}
+
+.hospital__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(34);
+}
+
+.hospital__item{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: calc(33.3333% - 2.3125rem * 2 / 3 );
+    width: 100%;
+    min-height: rem(110);
+    background-color: #F1EDDD;
+    padding: rem(21) 0;
+    border-radius: rem(12);
+}
+
+.hospital__item + .hospital__item{
+    margin-left: rem(37);
+    @include mq(md){
+        margin-left: rem(37);
+    }
+}
+
+.hospital__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; // 追加
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: calc(34/20);
+    letter-spacing: 0.034em;
+}
+
+.hospital__box{
+    margin-top: rem(77.9);
+    @include mq(md) {
+        display: flex;
+        align-items: flex-start;
+        gap: 0 rem(45);
+    }
+}
+
+.hospital__box--width{
+    @include mq(md) {
+        gap: 0 rem(25.5);
+    }
+}
+
+.hospital__text{
+    width: 100%;
+    text-align: left;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(27/16);
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        width: 66.33%;
+    }
+}
+
+.hospital__text--width{
+    width: 100%;
+    @include mq(md) {
+        width: 61.33%;
+    }
+}
+
+.hospital__img{
+    width: 100%;
+    @include mq(md) {
+        width: 28.66%;
+    }
+}
+
+.hospital__img--width{
+    width: 100%;
+    @include mq(md) {
+        width: 35.88%;
+    }
+}
+
+.hospital__img img {
+    aspect-ratio: 258/239;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 258/239;
+    }
+}
+
+.hospital__img--width img {
+    aspect-ratio: 323/185;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 323/185;
+    }
+}
+
+.hospital__table {
+    max-width: rem(624.5);
+    margin: rem(77.5) auto 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hospital__table th{
+    border: 1px solid #ddd;
+    padding: rem(17) 0;
+    text-align: center;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.hospital__table td{
+    border: 1px solid #ddd;
+    padding: rem(8) 0 rem(4);
+    text-align: center;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.hospital__table span {
+    font-size: rem(13);
+    line-height: calc(23/13);
+    letter-spacing: 0.00em;
+    margin-left: rem(26);
+}
+
+.hospital__table th {
+    background-color: #FFE8E8;
+}
+
+  /* 指定の列幅を適用 */
+.hospital__table th:first-child,
+.hospital__table td:first-child {
+    width: 174px;
+}
+
+.hospital__table th:nth-child(2) {
+    width: 225px;
+    background-color: #FFE0E0; /* 通常価格のヘッダーのみ背景色 */
+}
+
+.hospital__table td:nth-child(2) {
+width: 225px;
+background-color: #EDEDED; /* 金額が入っている通常価格のセルに背景色 */
+}
+
+.hospital__table th:nth-child(3),
+.hospital__table td:nth-child(3) {
+    width: 225px;
+}
+
+.hospital__table tbody td {
+    background-color: #F6F6F6;
+}
+.hospital__table td {
+    vertical-align: middle;
+}
+
+.hospital__buttons{
+    margin-top: rem(113.2);
+}

@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.flow__list{
+    margin-top: rem(84);
+}
+
+.flow__item + .flow__item{
+    margin-top: rem(16);
+}
+
+.flow__content{
+    background-color: #EDE8DC;
+    border-radius: rem(27);
+    padding: rem(44) rem(66) rem(30) rem(32);
+}
+
+.flow__subtitle{
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.flow__text{
+    margin-top: rem(27);
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(27/16);
+    letter-spacing: 0.03em;
+}
+
+.flow-arrow{
+    width: rem(71);
+    height: rem(31);
+    margin: rem(17) auto ;
+}
