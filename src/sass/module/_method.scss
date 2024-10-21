@@ -1,0 +1,180 @@
+@use "global" as *;
+
+.method{
+    text-align: center;
+}
+
+.method__head{
+    color: $white;
+    background-image: url('../images/common/method-bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(124.3) 0 rem(105.2);
+}
+
+.method__subtitle{
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.1em;
+}
+
+.method__subtitle-pink{
+    background-color: #EFA1A1;
+}
+
+.method__subtitle-gold{
+    background-color: $brown;
+}
+
+.method__subtitle-pink,
+.method__subtitle-gold{
+    display: inline-block;
+    padding: rem(14) rem(25);
+    border: solid 2px $white;
+    border-radius: rem(15);
+}
+
+.method__title{
+    margin-top: rem(42);
+    font-size: rem(38);
+    font-weight: $bold;
+    line-height: calc(62/38);
+    letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.method__content{
+    background-image: url('../images/common/method-bg-gold.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(209) 0 rem(270);
+}
+
+.method__list{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.method__item{
+    background-color: #EFA1A1;
+    border-radius: rem(35);
+    @include mq(md){
+        max-width: calc(50% - 3.5rem * 1 / 2 );
+        width: 100%;
+        padding: rem(42) rem(42) rem(67);
+    }
+}
+
+.method__item--brown{
+    background-color: #BFB288;
+}
+
+.method__item + .method__item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(56);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.method__item:nth-child(2n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.method__item:nth-child(n + 3){
+    @include mq(md){
+        margin-top: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.method__box{
+    text-align: left;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    gap: 0 rem(18);
+    padding: rem(25.5) 0 rem(25.5) rem(22);
+    border-radius: rem(24);
+}
+
+.method__box--padding{
+    padding: rem(20.5) 0 rem(20.5) rem(22);
+}
+.method__box + .method__box{
+    margin-top: rem(25);
+}
+
+.method__check{
+    width: rem(30);
+    height: rem(30);
+}
+
+.method__text{
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(27/16);
+    letter-spacing: 0.03em;
+}
+
+
+
+
+
+
+
+.method__bottom{
+    margin-top: rem(72.9);
+}
+
+.method__recommendation{
+    color: $white;
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: calc(34/20);
+    letter-spacing: 0.03em;
+}
+
+.method__buttons{
+    padding: rem(17) 0;
+}
