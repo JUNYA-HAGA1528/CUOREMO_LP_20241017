@@ -1,24 +1,45 @@
 @use "global" as *;
 
+.fv__inner.inner{
+    max-width: $max-width;
+    padding: 0 0 0 rem(24);
+    @include mq(md) {
+        max-width: rem(1200);
+        padding: 0 rem(30);
+    }
+}
+
 .fv__bg{
-    background-image: url('../images/common/fv.jpg');
+    background-image: url('../images/common/fv-sp.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;    
-    margin-top: rem(-87);
+    background-size: cover;
+    margin-top: rem(-10);    
+    padding-bottom: rem(150);
     color: $white;
     position: relative;
     z-index: 1;
-    padding-bottom: rem(215);
+    @include mq(md) {
+        background-image: url('../images/common/fv.jpg');    margin-top: rem(-87);
+        margin-top: rem(-87);
+        padding-bottom: 15%;
+    }
 }
 
 
 .fv__tab{
+    max-width: rem(162);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0 rem(13);
+    gap: rem(7.5);
     text-align: left;
-    padding-top: rem(172);
+    padding-top: rem(67);
+    @include mq(md) {
+        max-width: 100%;
+        padding-top: rem(172);
+        gap: 0 rem(13);
+    }
 }
 
 .fv__ta-item{
@@ -26,33 +47,52 @@
     background-color: $white;
     color: $brown;
     display: inline-block;
-    width: rem(123);
-    padding: rem(10.5) 0;
-    font-size: rem(26);
+    width: rem(61.5);
+    padding: rem(5) 0;
+    font-size: rem(13);
     font-weight: $bold;
     line-height: 1;
     letter-spacing: 0.03em;
-    border-radius: rem(10);
+    border-radius: rem(5);
+    @include mq(md) {
+        width: rem(123);
+        padding: rem(10.5) 0;
+        font-size: rem(26);
+        border-radius: rem(10);
+    }
 }
 
 .fv__text{
-    margin-top: rem(27);
-    font-size: rem(32);
+    margin-top: rem(19);
+    font-size: rem(17);
     font-weight: $bold;
-    line-height: calc(50/32);
+    line-height: calc(25/17);
     letter-spacing: 0.1em;
+    @include mq(md) {
+        margin-top: rem(27);
+        font-size: rem(32);
+        line-height: calc(50/32);
+    }
 }
 
 .fv__title{
     margin-top: rem(10);
+    @include mq(md) {
+        margin-top: rem(10);
+    }
 }
 
 .fv__title span {
     background-color: #ED9C9B;
-    padding: rem(21) rem(18.5);
-    font-size: rem(52);
+    padding: rem(10.5) rem(9.25);
+    font-size: rem(26);
     font-weight: $bold;
-    line-height: calc(120/52);
+    line-height: calc(60/26);
     letter-spacing: 0.1em;
+    @include mq(md) {
+        padding: rem(21) rem(18.5);
+        font-size: rem(52);
+        line-height: calc(120/52);
+    }
 }
 

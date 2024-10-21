@@ -1,15 +1,22 @@
 @use "global" as *;
 
 .reason{
-
+    text-align: center;
 }
 
+.reason__inner.inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(39);
+    @include mq(md) {
+        max-width: rem(1200);
+        padding: 0 rem(30);
+    }
+}
 
 .reason__list{
-    margin-top: rem(77.8);
+    margin-top: rem(30);
+    @include mq(md) {
+        margin-top: rem(77.8);
+    }
 }
-
-
-
-
-

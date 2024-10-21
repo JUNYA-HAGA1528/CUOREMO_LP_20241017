@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.reason{
-    text-align: center;
-}
-
 .reason-card{
     @include mq(md){
         display: flex;
@@ -59,28 +55,40 @@
 }
 
 .reason-card__img{
-    margin-top: rem(31);
-    aspect-ratio: 340/224 ;
+    width: 72%;
+    margin: rem(10) auto 0;
+    @include mq(md) {
+        width: 100%;
+        margin-top: rem(31);
+    }
 }
 
 .reason-card__img img {
+    aspect-ratio: 214.5/141 ;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 340/224 ;
+    }
 }
 
 .reason-card__sentence {
     background-color: $brown;
     color: $white;
-    min-height: rem(134);
-    margin-top: rem(24);
-    padding: rem(21) 0 rem(25);
+    min-height: rem(68);
+    margin-top: rem(20.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: 1; // 追加
-    border-radius: rem(23);
+    border-radius: rem(11.5);
+    @include mq(md) {
+        margin-top: rem(24);
+        min-height: rem(134);
+        border-radius: rem(23);
+    }
 }
 
 .reason-card__subtitle {
@@ -89,10 +97,15 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1; // 追加
-    font-size: rem(20);
+    font-size: rem(16);
     font-weight: $bold;
-    line-height: calc(30/20);
-    letter-spacing: 0.034em;
+    line-height: calc(25/16);
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: calc(30/20);
+        letter-spacing: 0.034em;
+    }
 }
 
 .reason-card__text{
@@ -100,6 +113,15 @@
     flex-direction: column;
     flex-grow: 1;
     text-align: left;
-    margin-top: rem(29.8);
+    margin-top: rem(19.5);
     height: 100%;
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        margin-top: rem(29.8);
+        font-size: rem(16);
+        line-height: calc(27/16);
+    }
 }

@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .button a {
     display: inline-block;
 }
@@ -90,12 +91,12 @@
     background: $green;
     position: relative;
     color: #794E4E;
-    font-size: rem(18);
+    font-size: rem(22);
     font-weight: $bold;
-    padding-right: rem(64);
+    padding-right: rem(32);
     letter-spacing: 0.03em;
-    width: rem(300);
-    height: rem(58);
+    width: rem(229);
+    height: rem(53.5);
     border-radius: rem(50);
     z-index: 1;
     transition: 0.4s;
@@ -104,15 +105,23 @@
         width: rem(458);
         height: rem(77);    
         font-size: rem(32);
+        padding-right: rem(64);
     }
 }
 
 .button__item--method span::after {
 	background-image: url(../images/common/method-arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
     top: 50%;
-    right: rem(-2);
-    width: rem(32);
-    height: rem(28);
+    right: rem(30);
+    width: rem(16);
+    height: rem(14);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
     @include mq(md) {
         right: rem(110);
         width: rem(32);
@@ -120,12 +129,37 @@
     }
 }
 
+
+
+.button__item--brown  {
+    font-family: $base-family;
+    background: $green;
+    position: relative;
+    color: #794E4E;
+    font-size: rem(22);
+    font-weight: $bold;
+    padding-right: rem(20);
+    letter-spacing: 0.03em;
+    width: rem(272);
+    height: rem(53.5);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    @include mq(md) {
+        width: rem(458);
+        height: rem(77);    
+        font-size: rem(32);
+        padding-right: rem(64);
+    }
+}
+
 .button__item--brown span::after {
 	background-image: url(../images/common/method-arrow-brown.png);
     top: 50%;
-    right: rem(-2);
-    width: rem(32);
-    height: rem(28);
+    right: rem(15);
+    width: rem(16);
+    height: rem(14);
     @include mq(md) {
         right: rem(65);
         width: rem(32);
@@ -133,21 +167,3 @@
     }
 }
 
-
-.button__item--method:hover{
-    opacity: 0.5;
-}
-
-.button__item--method:hover span::after {
-    right: rem(66); /* ここで右に移動する値を指定します */
-    transition: 0.4s right; /* rightの移動に対するアニメーション */
-}
-
-.button__item--brown:hover{
-    opacity: 0.5;
-}
-
-.button__item--brown:hover span::after {
-    right: rem(100); /* ここで右に移動する値を指定します */
-    transition: 0.4s right; /* rightの移動に対するアニメーション */
-}
