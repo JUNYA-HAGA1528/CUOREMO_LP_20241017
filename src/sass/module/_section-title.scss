@@ -5,9 +5,12 @@
 }
 
 .section-title__head{
-    font-size: rem(32);
+    font-size: rem(22);
     font-weight: $bold;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
 .section-title__jp{

@@ -1,5 +1,108 @@
 @use "global" as *;
 
+
 .spots{
     background-color: #FBFAF7;
 }
+
+
+/*input要素は非表示*/
+input {
+    display: none;
+  }
+  
+  /*タブエリアの設定*/
+  .tab_area {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  /*タブボタン部分の共通スタイル*/
+  label {
+    display: block;
+    padding: rem(17) 0 rem(8);
+    margin-right: 2px;
+    border-radius: 10px 10px 0 0;
+    float: left;
+    cursor: pointer;
+    order: -1;
+    width: 243px; /* タブの幅を243pxに統一 */
+    text-align: center; /* タブのテキストを中央に配置 */
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1;
+
+  }
+  
+  /*コンテンツ部分*/
+  .content {
+    display: none;
+    width: 100%;
+    padding: 1em;
+    background: #E7CCE6;
+
+  }
+  
+  .aaa {
+    opacity: 0;
+  }
+  
+  /* タブ1が選択されていない時の背景色 */
+  #tab1:not(:checked) + .btn_tab {
+    background: #FFFFFF;
+  }
+  
+  /* タブ2が選択されていない時の背景色 */
+  #tab2:not(:checked) + .btn_tab {
+    background: #F4EFE6;
+  }
+  
+  /* タブ3が選択されていない時の背景色 */
+  #tab3:not(:checked) + .btn_tab {
+    background: #EDE8DC;
+  }
+  
+  /*タブを選択したとき*/
+  input:checked + .btn_tab {
+    background: #E7CCE6;
+  }
+  
+  input:checked + .btn_tab + .content {
+    display: block;
+  }
+  
+  /*コンテンツをフェイドインするアニメーション*/
+  input:checked + .btn_tab + .content .aaa {
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+  
+  /* タブ1が選択されたときのスタイル */
+  #tab1:checked + .btn_tab {
+    background: #FFFFFF; /* タブボタンの背景色 */
+  }
+  #tab1:checked + .btn_tab + .content {
+    background: #FFFFFF; /* コンテンツの背景色 */
+  }
+  
+  /* タブ2が選択されたときのスタイル */
+  #tab2:checked + .btn_tab {
+    background: #F4EFE6; /* タブボタンの背景色 */
+  }
+  #tab2:checked + .btn_tab + .content {
+    background: #F4EFE6; /* コンテンツの背景色 */
+  }
+  
+  /* タブ3が選択されたときのスタイル */
+  #tab3:checked + .btn_tab {
+    background: #EDE8DC; /* タブボタンの背景色 */
+  }
+  #tab3:checked + .btn_tab + .content {
+    background: #EDE8DC; /* コンテンツの背景色 */
+  }
+  

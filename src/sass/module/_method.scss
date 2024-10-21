@@ -11,6 +11,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: rem(124.3) 0 rem(105.2);
+    position: relative;
+    z-index: 2;
 }
 
 .method__subtitle{
@@ -63,7 +65,10 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: rem(-75);
     padding: rem(209) 0 rem(270);
+    position: relative;
+    z-index: 1;
 }
 
 .method__list{

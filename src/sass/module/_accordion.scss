@@ -7,7 +7,10 @@
 }
 
 .accordion__item + .accordion__item{
-    margin-top: rem(30);
+    margin-top: rem(6.5);
+    @include mq(md) {
+        margin-top: rem(30);
+    }
 }
 
 .accordion__header {
@@ -18,9 +21,12 @@
     background-color: #fff;
     color: #5e5e5e;
     cursor: pointer;
-    padding: rem(22) rem(32) rem(22) rem(38);
+    padding: rem(13.5) rem(14) rem(11) rem(19);
     font-size: rem(16);
     font-weight: bold;
+    @include mq(md) {
+        padding: rem(22) rem(32) rem(22) rem(38);
+    }
 }
 
 .accordion__item.active .accordion__header {
@@ -37,8 +43,12 @@
 
 .accordion__textBox{
     display: flex;
-    align-items:center;
-    gap: 0 rem(40);
+    align-items:flex-start;
+    gap: 0 rem(16.5);
+    @include mq(md) {
+        align-items:center;
+        gap: 0 rem(40);
+    }
 }
 
 .accordion__textBox--aline{
@@ -48,25 +58,39 @@
 .accordion__head{
     font-family: $five-family;
     color: $brown;
-    font-size: rem(32);
+    font-size: rem(20);
     font-weight: $regular;
     line-height: 1;
     letter-spacing: 0.03em;
+    padding-top: rem(3);
+    @include mq(md) {
+        font-size: rem(32);
+        padding-top: 0;
+    }
 }
 
 .accordion__question {
-    max-width: rem(954);
+    max-width: 83%;
     text-align: left;
-    font-size: rem(20);
+    font-size: rem(15);
     font-weight: $medium;
-    line-height: 2;
+    line-height: 1.7;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        max-width: rem(954);
+        font-size: rem(20);
+        line-height: 2;
+    }
 }
 
 .accordion__question--text{
     padding-top: rem(2);
-    font-size: rem(16);
-    line-height: calc(27/16);
+    font-size: rem(14);
+    line-height: 1.7;
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(27/16);
+    }
 }
 
 .accordion__icon {
@@ -87,11 +111,14 @@
 
 .accordion__content {
     display: none;
-    padding: rem(34) rem(38) rem(27.5);
+    padding: rem(13.5) rem(0) rem(23) rem(19);
     background-color: #fff;
     font-size: rem(14);
     color: #5e5e5e;
     border-radius: 0 0 rem(8) rem(8);
+    @include mq(md) {        
+        padding: rem(34) rem(38) rem(27.5);
+    }
 }
 
 .accordion__item.active .accordion__content {
@@ -108,13 +135,17 @@
 .accordion__icon {
     background-color: $brown;
     position: relative;
-    height: rem(43); /* 円の高さ */
-    width: rem(43);  /* 円の幅 */
+    height: rem(20); /* 円の高さ */
+    width: rem(28);  /* 円の幅 */
     border-radius: 50%; /* 丸にする */
     border: 2px solid $brown; /* 外枠の色 */
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mq(md) {
+        height: rem(43); /* 円の高さ */
+        width: rem(43);  /* 円の幅 */
+    }
 }
 
 .accordion__icon span {
@@ -122,6 +153,9 @@
     height: 1px; /* 線の厚み */
     width: 50%; /* 円の中に収まる幅 */
     position: absolute;
+    @include mq(md) {
+        width: 50%; /* 円の中に収まる幅 */
+    }
 }
 
 .accordion__icon span:nth-of-type(1) {

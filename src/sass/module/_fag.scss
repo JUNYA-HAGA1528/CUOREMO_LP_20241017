@@ -5,9 +5,16 @@
     padding: rem(120) 0 rem(120);
 }
 
+.faq__inner{
+    max-width: $max-width;
+}
+
 .fag--second{
     background-color: #EDE8DC;
-    padding: rem(120) 0 rem(110);
+    padding: rem(50) 0 rem(43);
+    @include mq(md) {
+        padding: rem(120) 0 rem(110);
+    }
 }
 
 .fag__accordion{
@@ -15,10 +22,16 @@
 }
 
 .fag__accordion--second{
-    margin-top: rem(83);
+    margin-top: rem(50);
+    @include mq(md) {
+        margin-top: rem(83);
+    }
 }
 
 .fag__buttons{
     text-align: center;
-    margin-top: rem(115);
+    margin-top: rem(58);
+    @include mq(md) {
+        margin-top: rem(115);
+    }
 }

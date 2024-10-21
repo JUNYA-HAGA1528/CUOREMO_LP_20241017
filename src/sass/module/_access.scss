@@ -1,12 +1,15 @@
 @use "global" as *;
 
-.access{
-
+.access__inner{
+    max-width: $max-width;
 }
 
 .access__img{
-    margin-top: rem(79.5);
+    margin-top: rem(40);
     aspect-ratio: 1140/325;
+    @include mq(md) {
+        margin-top: rem(79.5);
+    }
 }
 
 .access__img img {
@@ -16,11 +19,12 @@
 }
 
 .access__content{
-    margin-top: rem(67.5);
+    margin-top: rem(40);
     @include mq(md) {
         display: flex;
         align-items: center;
         gap: 0 rem(140);
+        margin-top: rem(67.5);
     }
 }
 
@@ -40,20 +44,25 @@
 
 .access__list{
     width: 100%;
+    margin-top: rem(20);
     @include mq(md) {
         width: 45.03%;
+        margin-top: rem(0);
     }
 }
 
 .access__item {
-    display: flex;
-    align-items: center;
     padding-top: rem(19.3);
     padding-bottom: rem(18.3);
     padding-left: rem(11);
-    font-size: rem(16);
+    font-size: rem(12);
     letter-spacing: 0.03em;
     border-bottom: solid 1px $brown;
+    @include mq(md) {
+        font-size: rem(16);
+        display: flex;
+        align-items: center;        
+    }
 
     &:first-child {
         padding-top: 0; // 最初の要素だけpadding-topを無効にする
@@ -72,8 +81,10 @@
 .access__item dd {
     font-weight: $medium;
     width: 100%;
+    margin-top: rem(10);
     line-height: 1.4;
     @include mq(md) {
         width: 70%;
+        margin-top: rem(0);
     }
 }

@@ -14,9 +14,13 @@
     top: -40%;
     left: 50%;
     transform: translateX(-50%);
-    width: rem(307);
-    height: rem(54);
+    width: rem(195);
+    height: rem(34);
     z-index: 100;
+    @include mq(md) {
+        width: rem(307);
+        height: rem(54);
+    }
 }
 
 .button__item  {
@@ -24,19 +28,20 @@
     background: $green;
     position: relative;
     color: $white;
-    font-size: rem(18);
+    font-size: rem(20);
     font-weight: $semiBold;
-    padding-right: rem(64);
+    padding-right: rem(20);
     letter-spacing: 0.08em;
-    width: rem(300);
-    height: rem(58);
+    width: rem(281);
+    height: rem(51.5);
     border-radius: rem(50);
     z-index: 1;
     transition: 0.4s;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
     @include mq(md) {
         width: rem(506);
-        height: rem(87);    
+        height: rem(87);
+        padding-right: rem(64);   
         font-size: rem(32);
     }
 }
@@ -49,9 +54,9 @@
 	content: "";
     position: absolute;
     top: 50%;
-    right: rem(-2);
-    width: rem(42);
-	height: rem(42);
+    right: rem(28);
+    width: rem(21);
+	height: rem(21);
 	transform: translateY(-50%);
 	transition: 0.4s background-color;
     @include mq(md) {
@@ -66,8 +71,11 @@
 }
 
 .button__item:hover span::after {
-    right: rem(66); /* ここで右に移動する値を指定します */
+    right: rem(20); /* ここで右に移動する値を指定します */
     transition: 0.4s right; /* rightの移動に対するアニメーション */
+    @include mq(md) {
+        right: rem(66); /* ここで右に移動する値を指定します */
+    }
 }
 
 

@@ -2,37 +2,63 @@
 
 .woman{
     background-color: $brown;
-    padding: rem(135) 0;
+    padding: rem(47) 0 rem(50.5);
+    @include mq(md) {
+        padding: rem(135) 0;
+    }
 }
 
-.woman__inner{
-    display: flex;
+.woman__inner.inner{
+    max-width: $max-width;
+    padding: 0;
+    @include mq(md) {
+        display: flex;
+        max-width: rem(1190);
+        padding: 0 rem(25);
+    }
 }
 
 .woman__img{
-    width: 50%;
+    width: 82.5%;
+    margin-left: rem(-20);
+    @include mq(md) {
+        width: 50%;
+        margin-left: rem(0);
+    }
 }
 
 .woman__sentence{
     position: relative;
     z-index: 100;
-    width: 56.3%;
-    margin-top: rem(211);
-    margin-left: rem(-70);
+    width: 85.6%;
+    margin-top: rem(-36);
+    margin-left: auto;
     background-color: $white;
-    padding: rem(52) 0 rem(47) rem(80);
+    padding: rem(21) 0 rem(10.5) rem(19);
+    @include mq(md) {
+        padding: rem(52) 0 rem(47) rem(80);
+        width: 56.3%;
+        margin-top: rem(211);
+        margin-left: rem(-70);
+    }
 }
 
 .woman__title{
-    font-size: rem(32);
+    font-size: rem(16);
     font-weight: $bold;
     line-height: 1.6;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
 .woman__remarks{
     margin-top: rem(5);
-    font-size: rem(20);
+    font-size: rem(13);
     font-weight: $medium;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
 }

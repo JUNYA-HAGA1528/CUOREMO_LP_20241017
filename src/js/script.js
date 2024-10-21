@@ -17,4 +17,6 @@ document.querySelectorAll('.accordion__header').forEach(button => {
     });
 });
 
+
+
 });
