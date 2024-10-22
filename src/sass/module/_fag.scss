@@ -2,7 +2,10 @@
 
 .fag{
     background-color: #FBFAF6;
-    padding: rem(120) 0 rem(120);
+    padding: rem(50) 0 ;
+    @include mq(md) {
+        padding: rem(120) 0 ;
+    }
 }
 
 .faq__inner{
@@ -18,7 +21,10 @@
 }
 
 .fag__accordion{
-    margin-top: rem(79.5);
+    margin-top: rem(50);
+    @include mq(md) {
+        margin-top: rem(79.5);
+    }
 }
 
 .fag__accordion--second{
@@ -30,7 +36,7 @@
 
 .fag__buttons{
     text-align: center;
-    margin-top: rem(58);
+    margin-top: rem(66.5);
     @include mq(md) {
         margin-top: rem(115);
     }

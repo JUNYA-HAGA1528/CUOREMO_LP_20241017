@@ -1,6 +1,10 @@
 @use "global" as *;
 
 .top-flow{
-    margin-top: rem(132);
-    padding-bottom: rem(119);
+    margin-top: rem(50);
+    padding-bottom: rem(50);
+    @include mq(md) {
+        margin-top: rem(132);
+        padding-bottom: rem(119);
+}
 }

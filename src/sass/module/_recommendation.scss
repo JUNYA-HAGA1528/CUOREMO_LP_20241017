@@ -7,15 +7,18 @@
     background-size: cover;
     text-align: center;
     background-color: #EDE8DC;
-    padding: rem(106) 0;
+    padding: rem(50) 0;
     position: relative;
     z-index: 2;
+    @include mq(md) {
+        padding: rem(106) 0;
+    }
 }
 
 .recommendation__inner{
     max-width: $max-width;
     margin: auto;
-    padding: 0 rem(25);
+    padding: 0 rem(30);
     @include mq(md) {
         max-width: rem(1040);
         padding: 0 ;
@@ -24,14 +27,18 @@
 
 .recommendation__subtitle{
     color: $white;
-    font-size: rem(38);
+    font-size: rem(22);
     font-weight: $bold;
     line-height: 1;
     letter-spacing: 0.1em;
+    @include mq(md) {
+        font-size: rem(38);
+    }
 }
 
 
 .recommendation__list{
+    margin-top: rem(31.5);
     @include mq(md){
         display: flex;
         flex-wrap: wrap;
@@ -47,7 +54,7 @@
 }
 
 .recommendation__item + .recommendation__item{
-    margin-top: rem(40);
+    margin-top: rem(9);
     @include mq(md){
         margin-top: 0;
         margin-left: rem(126.5);

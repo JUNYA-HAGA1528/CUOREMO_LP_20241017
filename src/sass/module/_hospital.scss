@@ -2,8 +2,21 @@
 
 .hospital{
     text-align: center;
-    padding: rem(120) 0 rem(126);
+    padding: rem(41.8) 0 rem(51.1);
     background-color: #FBFAF7;
+    @include mq(md) {
+        padding: rem(120) 0 rem(126);
+    }
+}
+
+.hospital__inner.inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(5);
+    @include mq(md) {
+        max-width: rem(1200);
+        padding: 0 rem(30);
+    }
 }
 
 .hospital__content{
@@ -13,47 +26,81 @@
 }
 
 .hospital__content + .hospital__content{
-    margin-top: rem(102);
+    margin-top: rem(58.7);
+    @include mq(md) {
+        margin-top: rem(102);
+    }
 }
 
 .hospital__wrapper{
     max-width: rem(900);
     margin: 0 auto;
-    padding: rem(81) 0 rem(107);
+    padding: rem(39.1) 0 rem(35.6);
+    @include mq(md) {
+        padding: rem(81) 0 rem(107);
+    }
 
 }
 
 .hospital__title{
     background-color: $brown;
     color: $white;
-    padding: rem(40) 0;
-    font-size: rem(38);
+    margin: 0 rem(11.5);
+    padding: rem(19) 0 rem(18);
+    font-size: rem(22);
     font-weight: $bold;
     line-height: 1;
     letter-spacing: 0.1em;
-    border-radius: rem(12);
+    border-radius: rem(6);
+    @include mq(md) {
+        padding: rem(40) 0;
+        font-size: rem(38);
+        margin: 0;
+        border-radius: rem(12);
+    }
+}
+
+.hospital__title--padding{
+    padding: rem(15) 0 rem(23);
+    @include mq(md) {
+        padding: rem(30) 0 rem(50); 
+    }
+}
+
+.dots {
+    color: $white;
+    text-emphasis: dot $white;
 }
 
 .hospital__list{
     display: flex;
     flex-wrap: wrap;
-    margin-top: rem(34);
+    margin-top: rem(22);
+    padding: 0 rem(12);
+    @include mq(md) {
+        margin-top: rem(34);
+        padding: 0;
+    }
 }
 
 .hospital__item{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: calc(33.3333% - 2.3125rem * 2 / 3 );
+    max-width: calc(33.3333% - 1.59375rem * 2 / 3 );
     width: 100%;
-    min-height: rem(110);
+    min-height: rem(96);
     background-color: #F1EDDD;
-    padding: rem(21) 0;
-    border-radius: rem(12);
+    border-radius: 50%;
+    @include mq(md) {
+        max-width: calc(33.3333% - 2.3125rem * 2 / 3 );
+        min-height: rem(110);
+        border-radius: rem(12);
+    }
 }
 
 .hospital__item + .hospital__item{
-    margin-left: rem(37);
+    margin-left: rem(25.5);
     @include mq(md){
         margin-left: rem(37);
     }
@@ -65,18 +112,36 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1; // 追加
-    font-size: rem(20);
+    font-size: rem(14);
     font-weight: $bold;
-    line-height: calc(34/20);
+    line-height: calc(17.5/14);
     letter-spacing: 0.034em;
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: calc(34/20);
+    }
+}
+
+
+
+.hospital__subtitle span {
+    font-size: rem(9);
+    margin-top: rem(5);
+    @include mq(md) {
+        font-size: rem(16);
+        margin-top: rem(0);
+    }
 }
 
 .hospital__box{
-    margin-top: rem(77.9);
+    margin-top: rem(23.5);
+    padding: 0 rem(20);
     @include mq(md) {
         display: flex;
         align-items: flex-start;
         gap: 0 rem(45);
+        margin-top: rem(77.9);
+        padding: 0;
     }
 }
 
@@ -89,11 +154,13 @@
 .hospital__text{
     width: 100%;
     text-align: left;
-    font-size: rem(16);
+    font-size: rem(14);
     font-weight: $medium;
-    line-height: calc(27/16);
+    line-height: calc(24/14);
     letter-spacing: 0.03em;
     @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(27/16);
         width: 66.33%;
     }
 }
@@ -106,21 +173,16 @@
 }
 
 .hospital__img{
-    width: 100%;
+    width: 55.7%;
+    margin: rem(20) auto 0;
     @include mq(md) {
         width: 28.66%;
-    }
-}
-
-.hospital__img--width{
-    width: 100%;
-    @include mq(md) {
-        width: 35.88%;
+        margin: 0;
     }
 }
 
 .hospital__img img {
-    aspect-ratio: 258/239;
+    aspect-ratio: 181/168;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -129,8 +191,18 @@
     }
 }
 
+.hospital__img--width{
+    width: 72.7%;
+    margin: rem(20) auto 0;
+    @include mq(md) {
+        width: 35.88%;
+        margin: 0;
+    }
+}
+
+
 .hospital__img--width img {
-    aspect-ratio: 323/185;
+    aspect-ratio: 236/144.5;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -140,37 +212,52 @@
 }
 
 .hospital__table {
-    max-width: rem(624.5);
-    margin: rem(77.5) auto 0;
+    max-width: rem(339);
+    margin: rem(35.6) auto 0;
     width: 100%;
     border-collapse: collapse;
+    @include mq(md) {
+        max-width: rem(624.5);
+        margin: rem(77.5) auto 0;
+    }
 }
 
 .hospital__table th{
-    border: 1px solid #ddd;
-    padding: rem(17) 0;
+    padding: rem(12.5) 0;
     text-align: center;
-    font-size: rem(16);
+    font-size: rem(13);
     font-weight: $medium;
     line-height: 1;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(16);
+        padding: rem(17) 0;
+    }
 }
 
 .hospital__table td{
-    border: 1px solid #ddd;
-    padding: rem(8) 0 rem(4);
+    padding: rem(12.5) 0;
     text-align: center;
-    font-size: rem(16);
+    font-size: rem(13);
     font-weight: $medium;
-    line-height: 1;
+    line-height: 1.4;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(16);
+        padding: rem(8) 0 rem(4);
+        line-height: 1;
+    }
 }
 
 .hospital__table span {
-    font-size: rem(13);
-    line-height: calc(23/13);
+    font-size: rem(10);
+    line-height: calc(17/10);
     letter-spacing: 0.00em;
     margin-left: rem(26);
+    @include mq(md) {
+        font-size: rem(13);
+        line-height: calc(23/13);
+    }
 }
 
 .hospital__table th {
@@ -180,22 +267,34 @@
   /* 指定の列幅を適用 */
 .hospital__table th:first-child,
 .hospital__table td:first-child {
-    width: 174px;
-}
-
-.hospital__table th:nth-child(2) {
-    width: 225px;
-    background-color: #FFE0E0; /* 通常価格のヘッダーのみ背景色 */
+    width: 58.5px;
+    @include mq(md) {
+        width: 174px;
+    }
 }
 
 .hospital__table td:nth-child(2) {
-width: 225px;
-background-color: #EDEDED; /* 金額が入っている通常価格のセルに背景色 */
+    width: 140.5px;
+    background-color: #EDEDED; /* 金額が入っている通常価格のセルに背景色 */
+    @include mq(md) {
+        width: 225px;
+    }
+}
+
+.hospital__table th:nth-child(2) {
+    width: 140.5px;
+    background-color: #FFE0E0; /* 金額が入っている通常価格のセルに背景色 */
+    @include mq(md) {
+        width: 225px;
+    }
 }
 
 .hospital__table th:nth-child(3),
 .hospital__table td:nth-child(3) {
-    width: 225px;
+    width: 140.5px;
+    @include mq(md) {
+        width: 225px;
+    }
 }
 
 .hospital__table tbody td {
@@ -206,5 +305,8 @@ background-color: #EDEDED; /* 金額が入っている通常価格のセルに�
 }
 
 .hospital__buttons{
-    margin-top: rem(113.2);
+    margin-top: rem(51.2);
+    @include mq(md) {
+        margin-top: rem(113.2);
+    }
 }

@@ -1,7 +1,14 @@
 @use "global" as *;
 
 .flow__list{
-    margin-top: rem(84);
+    margin-top: rem(50);
+    @include mq(md) {
+        margin-top: rem(84);
+    }
+}
+
+.flow__inner{
+    max-width: $max-width
 }
 
 .flow__item + .flow__item{
@@ -10,27 +17,44 @@
 
 .flow__content{
     background-color: #EDE8DC;
-    border-radius: rem(27);
-    padding: rem(44) rem(66) rem(30) rem(32);
+    padding: rem(16);
+    border-radius: rem(13.5);
+    @include mq(md) {
+        padding: rem(44) rem(66) rem(30) rem(32);
+        border-radius: rem(27);
+    }
 }
 
 .flow__subtitle{
-    font-size: rem(20);
+    font-size: rem(16);
     font-weight: $bold;
     line-height: 1;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
 }
 
 .flow__text{
-    margin-top: rem(27);
-    font-size: rem(16);
+    margin-top: rem(12.5);
+    font-size: rem(14);
     font-weight: $medium;
-    line-height: calc(27/16);
+    line-height: calc(24/14);
     letter-spacing: 0.03em;
+    @include mq(md) {
+        margin-top: rem(27);
+        font-size: rem(16);
+        line-height: calc(27/16);
+    }
 }
 
 .flow-arrow{
-    width: rem(71);
-    height: rem(31);
-    margin: rem(17) auto ;
+    width: rem(51.5);
+    height: rem(22.5);
+    margin: rem(12.5) auto ;
+    @include mq(md) {
+        width: rem(71);
+        height: rem(31);
+        margin: rem(17) auto ;
+    }
 }

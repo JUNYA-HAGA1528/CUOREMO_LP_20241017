@@ -4,7 +4,11 @@
     font-family: $second-family;
     background-color: #FBFAF6;
     text-align: center;
-    font-size: rem(12);
+    font-size: rem(9);
     font-weight: $regular;
-    padding:rem(25) 0 ;
+    padding:rem(11) 0 ;
+    @include mq(md) {
+        font-size: rem(12);
+        padding:rem(25) 0 ;
+    }
 }

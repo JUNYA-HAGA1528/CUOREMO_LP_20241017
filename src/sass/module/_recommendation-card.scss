@@ -4,49 +4,81 @@
     background-color: $white;
     display: flex;
     align-items: center;
-    padding: rem(25.5) 0 rem(25.5) rem(19);
-    gap: 0 rem(20.2);
-    border-radius: rem(24);
+    padding: rem(12.5) 0 rem(12.5) rem(15);
+    gap: 0 rem(9);
+    border-radius: rem(12);
+    @include mq(md) {
+        padding: rem(25.5) 0 rem(25.5) rem(19);
+        gap: 0 rem(20.2);
+        border-radius: rem(24);
+    }
 }
 
 .recommendation-card__wrapper + .recommendation-card__wrapper{
-    margin-top: rem(25);
+    margin-top: rem(9);
+    @include mq(md) {
+        margin-top: rem(25);
+    }
 }
 
 .recommendation-card__check{
-    width: rem(30);
-    height: rem(30);
+    width: rem(20);
+    height: rem(20);
+    @include mq(md) {
+        width: rem(30);
+        height: rem(30);
+    }
 }
 
 .recommendation-card__text{
-    font-size: rem(16);
+    font-size: rem(13);
     font-weight: $medium;
-    line-height: calc(27/16);
+    line-height: calc(22/13);
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(27/16);
+    }
 }
 
 .recommendation__sentence{
-    margin-top: rem(87.2);
+    margin-top: rem(47.5);
+    @include mq(md) {
+        margin-top: rem(87.2);
+    }
 }
 
 .recommendation__title{
     color: $white;
-    font-size: rem(32);
+    font-size: rem(16);
     font-weight: $bold;
-    line-height: 1.8;
+    line-height: 1.68;
     letter-spacing: 0.1em;
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: 1.8;
+    }
 }
 
 .recommendation__title--white{
     background-color: $white;
     color: $brown;
-    padding: rem(18) rem(92) rem(11);
-    font-size: rem(38);
-    line-height: calc(65/38);
+    padding: rem(6) rem(31.2);
+    font-size: rem(22);
+    line-height: calc(32.5/22);
+    @include mq(md) {
+        padding: rem(18) rem(92) rem(11);
+        font-size: rem(38);
+        line-height: calc(65/38);
+    }
 }
 
 .recommendation__title--font{
     color: $white;
-    font-size: rem(38);
-    line-height: 1;
+    font-size: rem(22);
+    line-height: calc(32.5/22);
+    @include mq(md) {
+        font-size: rem(38);
+        line-height: 1;
+    }
 }

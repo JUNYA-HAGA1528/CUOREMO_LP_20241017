@@ -5,7 +5,7 @@
 }
 
 .section-title__head{
-    font-size: rem(22);
+    font-size: rem(15);
     font-weight: $bold;
     letter-spacing: 0.03em;
     @include mq(md) {
@@ -26,22 +26,42 @@
 
 .section-title__jp--wprries{
     color: $black;
-    font-size: rem(18);
-    line-height: calc(55/38);
+    font-size: rem(22);
+    line-height: calc(32.5/22);
     letter-spacing: 0.1em;
     @include mq(md) {
         margin-top: rem(4);
         font-size: rem(38);
+        line-height: calc(55/38);
+    }
+}
+
+.section-title__jp--improvement{
+    color: $black;
+    font-size: rem(22);
+    line-height: calc(32.5/22);
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        margin-top: rem(4);
+        font-size: rem(38);
+        line-height: calc(55/38);
     }
 }
 
 .section-title__jp--font{
     color: $black;
-    font-size: rem(18);
+    font-size: rem(22);
     line-height: 1;
     letter-spacing: 0.03em;
     @include mq(md) {
         font-size: rem(38);
+    }
+}
+
+.section-title__jp--flow{
+    font-size: rem(15);
+    @include mq(md) {
+        font-size: rem(32);
     }
 }
 
@@ -57,6 +77,10 @@
 
 .marker--font {
     background: none;
+    font-size: rem(22);
+    @include mq(md) {
+        font-size: rem(38);
+    }
 }
 
 
@@ -91,6 +115,10 @@
 
 .marker--darkBrown{
     background: linear-gradient(transparent 60%, #D4CBAD 60%);
+    font-size: rem(21);
+    @include mq(md) {
+        font-size: rem(38);
+    }
 }
 
 .marker--darkBrown::before,

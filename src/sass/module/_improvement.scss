@@ -1,16 +1,25 @@
 @use "global" as *;
 
 .improvement{
-    background-image: url('../images/common/improvement-bg.png');
+    background-image: url('../images/common/improvement-bg-sp.png');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: rem(104) 0 rem(308.5);
+    padding: rem(58.65) 0 rem(142);
     position: relative;
     z-index: 1;
+    @include mq(md) {
+        background-image: url('../images/common/improvement-bg.png');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;    
+        padding: rem(104) 0 rem(308.5);
+    }
 }
 
-
+.improvement__inner{
+    max-width: $max-width;
+}
 
 
 
@@ -18,7 +27,7 @@
 
 //リスト
 .improvement__list{
-    margin-top: rem(60);
+    margin-top: rem(42);
     @include mq(md){
         margin-top: rem(148);
         display: flex;
@@ -37,7 +46,7 @@
 }
 
 .improvement__item + .improvement__item{
-    margin-top: rem(40);
+    margin-top: rem(23.5);
     @include mq(md){
         margin-top: 0;
         margin-left: rem(28);
@@ -61,38 +70,62 @@
 
 .improvement__content {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: rem(35) rem(39) rem(41);
+    padding: rem(19.5) rem(30) rem(19.5) rem(22);
     background-color: $white;
     border-radius: rem(19);
+    @include mq(md) {        
+        flex-direction: column;
+        flex-grow: 1;
+        padding: rem(35) rem(39) rem(41);
+    }
 }
 
 .improvement__sentence{
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     text-align: left;
-    margin-top: rem(29);
+    @include mq(md) {
+        width: 100%;
+        margin-top: rem(29);
+    }
 }
 
 .improvement__subtitle{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0 rem(15);
     color: $brown;
     flex-grow: 1;
-    font-size: rem(20);
+    font-size: rem(16);
     font-weight: $bold;
-    line-height: calc(34/20);
+    line-height: calc(20/16);
     letter-spacing: 0.03em;
+    @include mq(md) {
+        text-align: center;
+        justify-content: center;
+        font-size: rem(20);
+        line-height: calc(34/20);
+    }
 }
 
 .improvement__img{
-    margin-top: rem(33);
+    width: 40%;
+    @include mq(md) {
+        width: rem(186);
+        height: rem(186);
+        object-fit: cover;
+        margin: rem(33) auto 0;
+    }
 }
 
 .improvement__img img {
-    width: rem(186);
-    height: rem(186);
+    aspect-ratio: 100/100;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin: 0 auto;
+    @include mq(md) {
+        aspect-ratio: 186/186;
+    }
 }

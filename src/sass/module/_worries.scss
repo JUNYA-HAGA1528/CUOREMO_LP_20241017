@@ -2,17 +2,29 @@
 
 .worries{
     background-color: #EDE8DC;
-    margin-top: rem(-10);
-    padding-bottom: rem(122);
+    padding-bottom: rem(49.7);
+    z-index: 10;
+    @include mq(md) {
+        margin-top: rem(-10);
+        padding-bottom: rem(122);
+    }
 }
 
-
+.worries__inner.inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(30);
+    @include mq(md) {
+        max-width: rem(1200);
+        padding: 0 rem(30);
+    }
+}
 
 
 
 //リスト
 .worries__list{
-    margin-top: rem(60);
+    margin-top: rem(49.35);
     @include mq(md){
         margin-top: rem(90);
         display: flex;
@@ -31,44 +43,46 @@
 }
 
 .worries__item + .worries__item{
-    margin-top: rem(40);
+    margin-top: rem(21.5);
     @include mq(md){
         margin-top: 0;
         margin-left: rem(45);
     }
 }
 
-/* 枚数が増えたときのための処理 */
-.worries__item:nth-child(3n + 1){
-    @include mq(md){
-        margin-left: 0;
-    }
-}
-
-/* 枚数が増えたときのための処理 */
-.worries__item:nth-child(n + 4){
-    @include mq(md){
-        margin-top: 8.25rem;
-    }
-}
-
-
 .worries__content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: rem(53) rem(50) rem(42.2);
+    padding: rem(18.9) rem(25) rem(14.1) rem(17);
     background-color: $white;
-    border-radius: rem(19);
+    border-radius: rem(9.5);
+    @include mq(md) {
+        padding: rem(53) rem(50) rem(42.2);
+        border-radius: rem(19);
+    }
 }
 
 .worries__subtitle{
     text-align: center;
     color: $brown;
-    font-size: rem(20);
+    font-size: rem(16);
     font-weight: $bold;
     line-height: 1;
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.worries__wrapper{
+    display: flex;
+    gap: 0 rem(10);
+    @include mq(md) {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
 }
 
 .worries__sentence{
@@ -76,24 +90,43 @@
     flex-direction: column;
     flex-grow: 1;
     text-align: left;
-    margin-top: rem(29);
+    margin-top: rem(24.9);
+    width: 63.41%;
+    @include mq(md) {
+        width: 100%;
+        margin-top: rem(29);
+    }
 }
 
 .worries__text{
     flex-grow: 1;
-    font-size: rem(16);
+    font-size: rem(13);
     font-weight: $medium;
-    line-height: calc(27/16);
+    line-height: calc(22/13);
     letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(27/16);
+    }
 }
 
 .worries__img{
+    width: 36.4%;
     margin-top: rem(30);
+    @include mq(md) {
+        width: 186px;
+        height: 186px;
+        object-fit: cover;
+        margin: 0 auto;        
+    }
 }
 
 .worries__img img {
-    width: 197px;
-    height: 197px;
+    aspect-ratio: 100/100;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin: 0 auto;
+    @include mq(md) {
+        aspect-ratio: 186/186;
+    }
 }
