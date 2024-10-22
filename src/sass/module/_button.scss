@@ -90,8 +90,6 @@
 
 
 // method
-
-
 .button__item--method  {
     font-family: $base-family;
     background: linear-gradient(180deg, #FFFFFF, #FFDBDB);
@@ -179,4 +177,90 @@
     box-shadow: none; /* 影をなくす */
     transform: translateY(rem(2)); /* 下に少し移動させて押し込む効果を表現 */
     transition: 0.2s ease-in-out; /* アニメーションを滑らかに */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button__box--cta {
+    position: relative;
+    z-index: 1;
+}
+
+.button__comment--cta {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(163.5);
+    height: rem(28.5);
+    z-index: 100;
+    @include mq(md) {
+        width: rem(200);
+        height: rem(35);
+    }
+}
+
+.button__item--cta  {
+    font-family: $second-family;
+    background: $green;
+    position: relative;
+    color: $white;
+    font-size: rem(16.5);
+    font-weight: $semiBold;
+    padding-right: rem(20);
+    letter-spacing: 0.08em;
+    width: rem(235.5);
+    height: rem(43);
+    border-radius: rem(50);
+    z-index: 1;
+    transition: 0.4s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    @include mq(md) {
+        width: rem(405);
+        height: rem(56);
+        padding-right: rem(50);   
+        font-size: rem(20);
+    }
+}
+
+.button__item--cta span::after {
+	background-image: url(../images/common/button-icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(24);
+    width: rem(17.5);
+	height: rem(17.5);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        right: rem(85);
+        width: rem(27.6);
+        height: rem(27.6);
+    }
+}
+
+.button__item--cta:hover{
+    opacity: 0.5;
+}
+
+.button__item--cta:hover span::after {
+    right: rem(20); /* ここで右に移動する値を指定します */
+    transition: 0.4s right; /* rightの移動に対するアニメーション */
+    @include mq(md) {
+        right: rem(66); /* ここで右に移動する値を指定します */
+    }
 }

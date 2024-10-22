@@ -17,6 +17,24 @@ document.querySelectorAll('.accordion__header').forEach(button => {
     });
 });
 
+document.addEventListener("scroll", function () {
+    const doctorButton = document.querySelector(".doctor__buttons");
+    const ctaButtons = document.querySelector(".cta__buttons");
+
+    if (doctorButton) {
+        const doctorButtonBottom = doctorButton.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+
+        // doctor__buttons が画面の上に完全に消えたら表示
+        if (doctorButtonBottom < 0) {
+            ctaButtons.classList.add("show");  // クラス追加でふわっと表示
+        } else {
+            ctaButtons.classList.remove("show"); // クラス削除で非表示
+        }
+    }
+});
+
+
 
 
 });
