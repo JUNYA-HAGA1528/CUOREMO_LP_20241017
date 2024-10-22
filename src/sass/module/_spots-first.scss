@@ -1,0 +1,138 @@
+@use "global" as *;
+
+
+
+.spots-first__title{
+    background-color: $brown;
+    color: $white;
+    text-align: center;
+    margin: 0 rem(11.5);
+    padding: rem(11) rem(14);
+    font-size: rem(22);
+    font-weight: $bold;
+    letter-spacing: 0.1em;
+    line-height: calc(27.5/22);
+    border-radius: rem(6);
+    @include mq(md) {
+        margin: 0;
+        padding: rem(26.5) 0;
+        font-size: rem(38);
+        line-height: calc(65/38);
+        border-radius: rem(12);
+    }
+}
+
+.spots-first__subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(3.75);
+    margin-top: rem(23.9);
+    padding: 0 rem(27.5);
+    @include mq(md) {
+        gap: 0 rem(16);
+        margin-top: rem(33.7);
+        padding: 0;
+    }
+}
+
+.spots-first__border{
+    border-top: 1px solid $brown;
+    width: 37.5%;
+    @include mq(md) {
+        width: 43.5%;
+    }
+}
+
+.spots-first__subtitle-text{
+    color: $brown;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(27/16);
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: calc(34/20);
+    }
+}
+
+
+.spots-first__tabs {
+    display: flex;flex-wrap: wrap;
+    align-items: center;
+    gap: rem(3);
+    text-align: center;
+    margin-top: rem(15);
+    padding: 0 14px;
+    @include mq(md) {
+        justify-content: center;
+        margin-top: rem(26.8);
+        padding:0;
+        gap: 0 rem(12);
+    }
+}
+
+.spots-first__tab {
+    display: inline-flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 水平方向中央揃え */
+    align-items: center; /* 垂直方向中央揃え */
+    background-color: #F1EDDD;
+    padding: rem(4.5) rem(11);
+    font-size: rem(15);
+    font-weight: $bold;
+    line-height: 1;
+    border-radius: rem(10);
+    text-align: center; /* テキストの中央揃え */
+    
+    @include mq(md) {
+        padding: rem(9) rem(12);
+        font-size: rem(20);
+    }
+}
+
+.spots-first__box{
+    margin-top: rem(27);
+    padding: 0 rem(20);
+    @include mq(md) {
+        display: flex;
+        align-items: flex-start;
+        gap: 0 rem(39);
+        margin-top: rem(54.8);
+        padding: 0;
+    }
+}
+
+.spots-first__text{
+    width: 100%;
+    text-align: left;
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(27/16);
+        width: 61.35%;
+    }
+}
+
+.spots-first__img{
+    width: 68%;
+    margin: rem(30) auto 0;
+    @include mq(md) {
+        width: 33.555%;
+        margin: 0;
+    }
+}
+
+.spots-first__img img {
+    aspect-ratio: 221.5/148;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 302/201;
+    }
+}
+
+
+

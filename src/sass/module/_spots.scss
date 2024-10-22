@@ -3,8 +3,21 @@
 
 .spots{
     background-color: #FBFAF7;
+    padding-bottom: rem(44.5);
+    @include mq(md) {
+        padding-bottom: rem(117.9);
+    }
 }
 
+.spots__inner.inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(5);
+    @include mq(md) {
+        max-width: rem(1140);
+        padding: 0 rem(30);
+    }
+}
 
 /*input要素は非表示*/
 input {
@@ -12,7 +25,7 @@ input {
 }
 
 /*タブエリアの設定*/
-.tab_area {
+.spots__container {
     display: flex;
     flex-wrap: wrap;
     
@@ -22,57 +35,26 @@ input {
 label {
     display: block;
     padding: rem(17) 0 rem(8);
-    margin-right: 2px;
     border-radius: 10px 10px 0 0;
     float: left;
     cursor: pointer;
     order: -1;
-    width: 243px; /* タブの幅を243pxに統一 */
+    width: 121px; /* タブの幅を243pxに統一 */
     text-align: center; /* タブのテキストを中央に配置 */
-    font-size: rem(32);
+    color: $brown;
+    font-size: rem(15);
     font-weight: $bold;
     line-height: 1;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
-
-}
-
-/*コンテンツ部分*/
-.content {
-    border-radius: 0 10px 10px 10px;
-    display: none;
-    width: 100%;
-    padding: 1em;
-    background: #E7CCE6;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
-}
-
-.content__title{
-    font-size: rem(22);
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aaa {
-    opacity: 0;
+    @include mq(md) {
+        width: 243px; /* タブの幅を243pxに統一 */
+        margin-right: 2px;
+        font-size: rem(32);
+    }
 }
 
   /* タブ1が選択されていない時の背景色 */
-#tab1:not(:checked) + .btn_tab {
+  #tab1:not(:checked) + .btn_tab {
     background: #FFFFFF;
 }
 
@@ -91,12 +73,12 @@ input:checked + .btn_tab {
     background: #E7CCE6;
 }
 
-input:checked + .btn_tab + .content {
+input:checked + .btn_tab + .spots__content {
     display: block;
 }
 
 /*コンテンツをフェイドインするアニメーション*/
-input:checked + .btn_tab + .content .aaa {
+input:checked + .btn_tab + .spots__content .aaa {
     animation: fadeIn 1.5s forwards;
 }
 
@@ -109,7 +91,7 @@ input:checked + .btn_tab + .content .aaa {
 #tab1:checked + .btn_tab {
     background: #FFFFFF; /* タブボタンの背景色 */
 }
-#tab1:checked + .btn_tab + .content {
+#tab1:checked + .btn_tab + .spots__content {
     background: #FFFFFF; /* コンテンツの背景色 */
 }
 
@@ -117,7 +99,7 @@ input:checked + .btn_tab + .content .aaa {
 #tab2:checked + .btn_tab {
     background: #F4EFE6; /* タブボタンの背景色 */
 }
-#tab2:checked + .btn_tab + .content {
+#tab2:checked + .btn_tab + .spots__content {
     background: #F4EFE6; /* コンテンツの背景色 */
 }
 
@@ -125,6 +107,33 @@ input:checked + .btn_tab + .content .aaa {
 #tab3:checked + .btn_tab {
     background: #EDE8DC; /* タブボタンの背景色 */
 }
-#tab3:checked + .btn_tab + .content {
+#tab3:checked + .btn_tab + .spots__content {
     background: #EDE8DC; /* コンテンツの背景色 */
+}
+
+
+/*コンテンツ部分*/
+.spots__content {
+    padding: rem(36.5) 0 rem(57.5);
+    border-radius: 0 10px 10px 10px;
+    display: none;
+    width: 100%;
+    background: #E7CCE6;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
+    @include mq(md) {
+        padding: rem(70) 0 rem(88.6);
+    }
+}
+
+.spots__wrapper{
+    max-width: rem(900);
+    margin: 0 auto;
+}
+
+.spots__buttons{
+    text-align: center;
+    margin-top: rem(62);
+    @include mq(md) {
+        margin-top: rem(120);
+    }
 }

@@ -17,7 +17,7 @@
         background-size: 100% rem(718);
         text-align: center;
         margin-top: -11%;
-        padding: rem(194) 0 17%;
+        padding: rem(194) 0 16%;
         position: relative;
         z-index: 2;
     }
@@ -99,7 +99,4 @@
 
 .doctor__buttons{
     margin-top: rem(50.5);
-    @include mq(md) {
-        margin-top: rem(63);
-    }
 }

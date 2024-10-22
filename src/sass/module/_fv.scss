@@ -20,9 +20,12 @@
     position: relative;
     z-index: 1;
     @include mq(md) {
-        background-image: url('../images/common/fv.jpg');    margin-top: rem(-87);
-        margin-top: rem(-87);
+        background-image: url('../images/common/fv.jpg');
+        background-position: calc(50% - 182px) center; /* 中央から左に移動 */
+        background-repeat: no-repeat;
+        background-size: 150%; /* 画像を少し拡大して右側が見切れないようにする */
         padding-bottom: 15%;
+        padding-top: rem(20);  
     }
 }
 
@@ -37,7 +40,7 @@
     padding-top: rem(67);
     @include mq(md) {
         max-width: 100%;
-        padding-top: rem(172);
+        padding-top: rem(115);
         gap: 0 rem(13);
     }
 }
@@ -78,7 +81,7 @@
 .fv__title{
     margin-top: rem(10);
     @include mq(md) {
-        margin-top: rem(10);
+        margin-top: rem(30);
     }
 }
 
