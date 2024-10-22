@@ -1,6 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
+// アコーディオン
 document.querySelectorAll('.accordion__header').forEach(button => {
     button.addEventListener('click', () => {
         const accordionItem = button.parentElement;
@@ -17,6 +17,7 @@ document.querySelectorAll('.accordion__header').forEach(button => {
     });
 });
 
+// CTA
 document.addEventListener("scroll", function () {
     const doctorButton = document.querySelector(".doctor__buttons");
     const ctaButtons = document.querySelector(".cta__buttons");

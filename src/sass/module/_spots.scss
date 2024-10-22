@@ -9,17 +9,17 @@
 /*input要素は非表示*/
 input {
     display: none;
-  }
-  
-  /*タブエリアの設定*/
-  .tab_area {
+}
+
+/*タブエリアの設定*/
+.tab_area {
     display: flex;
     flex-wrap: wrap;
     
-  }
-  
-  /*タブボタン部分の共通スタイル*/
-  label {
+}
+
+/*タブボタン部分の共通スタイル*/
+label {
     display: block;
     padding: rem(17) 0 rem(8);
     margin-right: 2px;
@@ -32,77 +32,99 @@ input {
     font-size: rem(32);
     font-weight: $bold;
     line-height: 1;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
 
-  }
-  
-  /*コンテンツ部分*/
-  .content {
+}
+
+/*コンテンツ部分*/
+.content {
+    border-radius: 0 10px 10px 10px;
     display: none;
     width: 100%;
     padding: 1em;
     background: #E7CCE6;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
+}
 
-  }
-  
-  .aaa {
+.content__title{
+    font-size: rem(22);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aaa {
     opacity: 0;
-  }
-  
+}
+
   /* タブ1が選択されていない時の背景色 */
-  #tab1:not(:checked) + .btn_tab {
+#tab1:not(:checked) + .btn_tab {
     background: #FFFFFF;
-  }
-  
+}
+
   /* タブ2が選択されていない時の背景色 */
-  #tab2:not(:checked) + .btn_tab {
+#tab2:not(:checked) + .btn_tab {
     background: #F4EFE6;
-  }
-  
+}
+
   /* タブ3が選択されていない時の背景色 */
-  #tab3:not(:checked) + .btn_tab {
+#tab3:not(:checked) + .btn_tab {
     background: #EDE8DC;
-  }
-  
-  /*タブを選択したとき*/
-  input:checked + .btn_tab {
+}
+
+/*タブを選択したとき*/
+input:checked + .btn_tab {
     background: #E7CCE6;
-  }
-  
-  input:checked + .btn_tab + .content {
+}
+
+input:checked + .btn_tab + .content {
     display: block;
-  }
-  
-  /*コンテンツをフェイドインするアニメーション*/
-  input:checked + .btn_tab + .content .aaa {
+}
+
+/*コンテンツをフェイドインするアニメーション*/
+input:checked + .btn_tab + .content .aaa {
     animation: fadeIn 1.5s forwards;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     0% { opacity: 0;}
     100% { opacity: 1;}
-  }
-  
+}
+
   /* タブ1が選択されたときのスタイル */
-  #tab1:checked + .btn_tab {
+#tab1:checked + .btn_tab {
     background: #FFFFFF; /* タブボタンの背景色 */
-  }
-  #tab1:checked + .btn_tab + .content {
+}
+#tab1:checked + .btn_tab + .content {
     background: #FFFFFF; /* コンテンツの背景色 */
-  }
-  
+}
+
   /* タブ2が選択されたときのスタイル */
-  #tab2:checked + .btn_tab {
+#tab2:checked + .btn_tab {
     background: #F4EFE6; /* タブボタンの背景色 */
-  }
-  #tab2:checked + .btn_tab + .content {
+}
+#tab2:checked + .btn_tab + .content {
     background: #F4EFE6; /* コンテンツの背景色 */
-  }
-  
+}
+
   /* タブ3が選択されたときのスタイル */
-  #tab3:checked + .btn_tab {
+#tab3:checked + .btn_tab {
     background: #EDE8DC; /* タブボタンの背景色 */
-  }
-  #tab3:checked + .btn_tab + .content {
+}
+#tab3:checked + .btn_tab + .content {
     background: #EDE8DC; /* コンテンツの背景色 */
-  }
-  
+}
