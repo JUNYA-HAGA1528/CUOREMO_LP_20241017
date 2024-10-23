@@ -39,7 +39,7 @@ label {
     float: left;
     cursor: pointer;
     order: -1;
-    width: 121px; /* タブの幅を243pxに統一 */
+    width: 121.6px; /* タブの幅を243pxに統一 */
     text-align: center; /* タブのテキストを中央に配置 */
     color: $brown;
     font-size: rem(15);
@@ -131,13 +131,13 @@ input:checked + .btn_tab + .spots__content .aaa {
 /*コンテンツ部分*/
 .spots__content {
     padding: rem(36.5) 0 rem(57.5);
-    border-radius: 0 10px 10px 10px;
     display: none;
     width: 100%;
     background: #E7CCE6;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2), 0px -2px 3px rgba(0, 0, 0, 0);
     @include mq(md) {
         padding: rem(95.5) 0 rem(88.6);
+        border-radius: 0 10px 10px 10px;
     }
 }
 

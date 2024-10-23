@@ -58,7 +58,7 @@
     background-color: $white;
     border-radius: rem(9.5);
     @include mq(md) {
-        padding: rem(53) rem(50) rem(42.2);
+        padding: rem(53) rem(40) rem(42.2);
         border-radius: rem(19);
     }
 }
@@ -117,7 +117,7 @@
         width: 186px;
         height: 186px;
         object-fit: cover;
-        margin: 0 auto;        
+        margin: rem(30) auto 0;        
     }
 }
 

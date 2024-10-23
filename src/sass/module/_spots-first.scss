@@ -57,14 +57,15 @@
 
 
 .spots-first__tabs {
-    display: flex;flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: rem(3);
     text-align: center;
     margin-top: rem(15);
     padding: 0 14px;
     @include mq(md) {
-        justify-content: center;
         margin-top: rem(26.8);
         padding:0;
         gap: 0 rem(12);

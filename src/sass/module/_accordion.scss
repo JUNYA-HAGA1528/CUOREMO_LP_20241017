@@ -112,16 +112,23 @@
 
 
 .accordion__content {
-    display: none;
-    padding: rem(13.5) rem(0) rem(23) rem(19);
-    background-color: #fff;
-    font-size: rem(14);
-    color: #5e5e5e;
-    border-radius: 0 0 rem(8) rem(8);
+    display: block; /* デフォルトで block にする */
+    max-height: 0; /* 初期状態は高さゼロ */
+    overflow: hidden; /* コンテンツが溢れないようにする */
+    opacity: 0; /* 初期状態は透明にする */
+    padding: 0; /* 初期はパディングもゼロ */
+    transition: max-height 0.7s ease, opacity 0.7s ease, padding 0.7s ease; /* アニメーションの設定 */
+}
+
+.accordion__item.active .accordion__content {
+    max-height: 500px; /* 十分に大きい値を指定。コンテンツの高さに応じて調整可能 */
+    opacity: 1; /* 表示する */
+    padding: rem(13.5) rem(0) rem(23) rem(19); /* パディングを元に戻す */
     @include mq(md) {        
         padding: rem(34) rem(38) rem(27.5);
     }
 }
+
 
 .accordion__item.active .accordion__content {
     display: block;
