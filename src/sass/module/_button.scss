@@ -76,7 +76,7 @@
 }
 
 .button__item:hover span::after {
-    right: rem(20); /* ここで右に移動する値を指定します */
+    right: rem(24); /* ここで右に移動する値を指定します */
     transition: 0.4s right; /* rightの移動に対するアニメーション */
     @include mq(md) {
         right: rem(66); /* ここで右に移動する値を指定します */
@@ -261,6 +261,6 @@
     right: rem(20); /* ここで右に移動する値を指定します */
     transition: 0.4s right; /* rightの移動に対するアニメーション */
     @include mq(md) {
-        right: rem(66); /* ここで右に移動する値を指定します */
+        right: rem(75); /* ここで右に移動する値を指定します */
     }
 }

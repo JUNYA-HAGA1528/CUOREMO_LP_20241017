@@ -25,20 +25,6 @@
     }
 }
 
-/* 枚数が増えたときのための処理 */
-.reason-card__list:nth-child(3n + 1){
-    @include mq(md){
-        margin-left: 0;
-    }
-}
-
-/* 枚数が増えたときのための処理 */
-.reason-card__list:nth-child(n + 4){
-    @include mq(md){
-        margin-top: 2.5rem;
-    }
-}
-
 .reason-card__item {
     display: flex;
     flex-direction: column;
@@ -49,16 +35,20 @@
 .reason-card__number{
     font-family: $force-family;
     color: $brown;
-    font-size: rem(50);
-    font-weight: $regular;
-    line-height: calc(72/50);
+    font-size: rem(30);
+    font-weight: $medium;
+    line-height: calc(43.5/30);
+    @include mq(md) {
+        font-size: rem(50);
+        line-height: calc(72/50);
+    }
 }
 
 .reason-card__img{
     width: 72%;
     margin: rem(10) auto 0;
     @include mq(md) {
-        width: 100%;
+        width: 97%;
         margin-top: rem(31);
     }
 }
@@ -85,7 +75,7 @@
     flex-grow: 1; // 追加
     border-radius: rem(11.5);
     @include mq(md) {
-        margin-top: rem(24);
+        margin-top: rem(22);
         min-height: rem(134);
         border-radius: rem(23);
     }
@@ -103,8 +93,8 @@
     letter-spacing: 0.03em;
     @include mq(md) {
         font-size: rem(20);
-        line-height: calc(30/20);
-        letter-spacing: 0.034em;
+        line-height: calc(34/20);
+        letter-spacing: 0.03em;
     }
 }
 
@@ -120,7 +110,7 @@
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     @include mq(md) {
-        margin-top: rem(29.8);
+        margin-top: rem(27.8);
         font-size: rem(16);
         line-height: calc(27/16);
     }

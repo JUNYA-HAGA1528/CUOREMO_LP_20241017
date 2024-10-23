@@ -13,7 +13,7 @@
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;    
-        padding: rem(104) 0 rem(308.5);
+        padding: rem(104) 0 rem(270);
     }
 }
 
@@ -29,7 +29,7 @@
 .improvement__list{
     margin-top: rem(42);
     @include mq(md){
-        margin-top: rem(148);
+        margin-top: rem(138);
         display: flex;
         flex-wrap: wrap;
     }
@@ -88,7 +88,6 @@
     text-align: left;
     @include mq(md) {
         width: 100%;
-        margin-top: rem(29);
     }
 }
 
@@ -106,12 +105,12 @@
         text-align: center;
         justify-content: center;
         font-size: rem(20);
-        line-height: calc(34/20);
+        line-height: 1.45;
     }
 }
 
 .improvement__img{
-    width: 40%;
+    width: 38%;
     @include mq(md) {
         width: rem(186);
         height: rem(186);

@@ -50,7 +50,7 @@
     border: solid 2px $white;
     border-radius: rem(7.5);
     @include mq(md) {
-        padding: rem(14) rem(25);
+        padding: rem(12.5) rem(25);
         border-radius: rem(15);
     }
 }
@@ -168,7 +168,10 @@
 }
 
 .method__box + .method__box{
-    margin-top: rem(25);
+    margin-top: rem(7.7);
+    @include mq(md) {
+        margin-top: rem(25);
+    }
 }
 
 .method__check{

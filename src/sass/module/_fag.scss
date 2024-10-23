@@ -4,7 +4,7 @@
     background-color: #FBFAF6;
     padding: rem(50) 0 ;
     @include mq(md) {
-        padding: rem(120) 0 ;
+        padding: rem(120) 0 rem(122);
     }
 }
 
@@ -23,14 +23,14 @@
 .fag__accordion{
     margin-top: rem(50);
     @include mq(md) {
-        margin-top: rem(79.5);
+        margin-top: rem(83);
     }
 }
 
 .fag__accordion--second{
     margin-top: rem(50);
     @include mq(md) {
-        margin-top: rem(83);
+        margin-top: rem(79.5);
     }
 }
 
@@ -38,6 +38,6 @@
     text-align: center;
     margin-top: rem(66.5);
     @include mq(md) {
-        margin-top: rem(115);
+        margin-top: rem(116);
     }
 }

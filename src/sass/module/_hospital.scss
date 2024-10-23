@@ -114,8 +114,8 @@
     flex-grow: 1; // 追加
     font-size: rem(14);
     font-weight: $bold;
-    line-height: calc(17.5/14);
-    letter-spacing: 0.034em;
+    line-height: 1.45;
+    letter-spacing: 0.03em;
     @include mq(md) {
         font-size: rem(20);
         line-height: calc(34/20);
@@ -309,4 +309,8 @@
     @include mq(md) {
         margin-top: rem(113.2);
     }
+}
+
+.hospital__table tbody tr:nth-child(2) {
+    border-top: 1px solid #C7C7C7;
 }

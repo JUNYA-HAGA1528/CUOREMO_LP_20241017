@@ -17,10 +17,10 @@
 
 .flow__content{
     background-color: #EDE8DC;
-    padding: rem(16);
+    padding: rem(16) rem(16) rem(10) ;
     border-radius: rem(13.5);
     @include mq(md) {
-        padding: rem(44) rem(66) rem(30) rem(32);
+        padding: rem(44) rem(66) rem(39) rem(32);
         border-radius: rem(27);
     }
 }

@@ -100,14 +100,14 @@
 .marker::before {
     left: -5px;
     @include mq(md) {
-        left: -20px;
+        left: -15px;
     }
 }
 
 .marker::after {
     right: -5px;
     @include mq(md) {
-        right: -20px;
+        right: -15px;
     }
 }
 
@@ -115,7 +115,7 @@
 
 .marker--darkBrown{
     background: linear-gradient(transparent 60%, #D4CBAD 60%);
-    font-size: rem(21);
+    font-size: rem(22);
     @include mq(md) {
         font-size: rem(38);
     }

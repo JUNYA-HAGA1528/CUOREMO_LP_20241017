@@ -21,11 +21,11 @@
     background-color: #fff;
     color: #5e5e5e;
     cursor: pointer;
-    padding: rem(13.5) rem(14) rem(11) rem(19);
+    padding: rem(10) rem(14) rem(8) rem(19);
     font-size: rem(16);
     font-weight: bold;
     @include mq(md) {
-        padding: rem(22) rem(32) rem(22) rem(38);
+        padding: rem(21) rem(24) rem(21) rem(38);
     }
 }
 
@@ -52,7 +52,9 @@
 }
 
 .accordion__textBox--aline{
-    align-items: flex-start;
+    @include mq(md) {
+        align-items: flex-start;
+    }
 }
 
 .accordion__head{
@@ -74,7 +76,7 @@
     text-align: left;
     font-size: rem(15);
     font-weight: $medium;
-    line-height: 1.7;
+    line-height: 1.4;
     letter-spacing: 0.03em;
     @include mq(md) {
         max-width: rem(954);
@@ -135,14 +137,16 @@
 .accordion__icon {
     background-color: $brown;
     position: relative;
-    height: rem(20); /* 円の高さ */
-    width: rem(28);  /* 円の幅 */
+    height: rem(21.5); /* 円の高さ */
+    max-width: rem(21.5);
+    width: 100%;  /* 円の幅 */
     border-radius: 50%; /* 丸にする */
     border: 2px solid $brown; /* 外枠の色 */
     display: flex;
     justify-content: center;
     align-items: center;
     @include mq(md) {
+        max-width: 100%;
         height: rem(43); /* 円の高さ */
         width: rem(43);  /* 円の幅 */
     }
