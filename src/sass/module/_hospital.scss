@@ -122,6 +122,12 @@
     }
 }
 
+.hospital__subtitle--padding{
+    padding-top: rem(5.5);
+    @include mq(md) {
+        padding-top: 0;
+    }
+}
 
 
 .hospital__subtitle span {

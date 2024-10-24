@@ -2,7 +2,9 @@
 
 .top-footer{
     margin-top: rem(30);
+    margin-bottom: rem(84);
     @include mq(md) {
         margin-top: rem(67.3);
+        margin-bottom: rem(115);
     }
 }
