@@ -35,6 +35,4 @@ document.addEventListener("scroll", function () {
 
 
 
-
-
 });

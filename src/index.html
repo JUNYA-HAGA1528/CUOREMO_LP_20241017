@@ -55,6 +55,10 @@
     
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+		window.addEventListener("touchmove", function(event) {}, {passive: true});
+
+	</script>
     <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
@@ -64,7 +68,7 @@
     --------------------------------->
     <header class="header">
         <h1 class="header__logo">
-            <img src="./assets/images/common/logo.webp" alt="渋谷あおぞらクリニック 美容外科・美容皮膚科" loading="lazy">
+            <img src="./assets/images/common/logo.webp" loading="lazy" alt="渋谷あおぞらクリニック 美容外科・美容皮膚科">
         </h1>
     </header>
 
@@ -101,9 +105,9 @@
     <div class="doctor">
         <div class="doctor__inner inner">
             <div class="doctor__images">
-                <img src="./assets/images/common/fv-comment1.webp" alt="最新の医療機器を多数導入" loading="lazy">
-                <img src="./assets/images/common/fv-comment2.webp" alt="渋谷駅A0出口徒歩2分" loading="lazy">
-                <img src="./assets/images/common/fv-comment3.webp" alt="平日・土日も診療" loading="lazy">
+                <img src="./assets/images/common/fv-comment1.webp" loading="lazy" alt="最新の医療機器を多数導入">
+                <img src="./assets/images/common/fv-comment2.webp" loading="lazy" alt="渋谷駅A0出口徒歩2分">
+                <img src="./assets/images/common/fv-comment3.webp" loading="lazy" alt="平日・土日も診療">
             </div>
 
             <div class="doctor__content">
@@ -140,9 +144,9 @@
                 <li class="reason-card__list">
                     <div class="reason-card__item">
                         <p class="reason-card__number">01</p>
-                        <figure class="reason-card__img">
+                        <div class="reason-card__img">
                             <img src="./assets/images/common/reason1.webp" alt="カウンセリングをしている女医" loading="lazy">
-                        </figure>
+                        </div>
                         <div class="reason-card__sentence">
                             <p class="reason-card__subtitle">
                                 誰にも相談できない悩みを<br>
@@ -155,9 +159,9 @@
                 <li class="reason-card__list ">
                     <div class="reason-card__item">
                         <p class="reason-card__number">02</p>
-                        <figure class="reason-card__img">
+                        <div class="reason-card__img">
                             <img src="./assets/images/common/reason2.webp" alt="握手をしているところ" loading="lazy">
-                        </figure>
+                        </div>
                         <div class="reason-card__sentence">
                             <p class="reason-card__subtitle">
                                 累計1000例を超える<br class="u-desktop">
@@ -171,9 +175,9 @@
                 <li class="reason-card__list">
                     <div class="reason-card__item">
                         <p class="reason-card__number">03</p>
-                        <figure class="reason-card__img">
+                        <div class="reason-card__img">
                             <img src="./assets/images/common/reason3.webp" alt="ラインでやりとりしているところ" loading="lazy">
-                        </figure>
+                        </div>
                         <div class="reason-card__sentence">
                             <p class="reason-card__subtitle">
                                 アフターケアの充実
@@ -299,9 +303,9 @@
                                     小陰唇が大きく、下着や衣類との摩擦で痛みが生じる場合、形状を整えることで痛みを軽減できます。
                                 </p>
                             </div>
-                            <figure class="worries__img">
+                            <div class="worries__img">
                                 <img src="./assets/images/common/worries1.webp" alt="女性の下半身" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -314,9 +318,9 @@
                                     黒ずみの濃い部分を切除・肥大した小陰唇を小さくすることで、見た目のコンプレックスを解消します。
                                 </p>
                             </div>
-                            <figure class="worries__img">
+                            <div class="worries__img">
                                 <img src="./assets/images/common/worries2.webp" alt="女性の下半身" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -330,9 +334,9 @@
                                     小陰唇が肥大化すると痛みや黒ずみ、悪臭の原因になることがあり、手術によって改善できます。
                                 </p>
                             </div>
-                            <figure class="worries__img">
+                            <div class="worries__img">
                                 <img src="./assets/images/common/worries3.webp" alt="空を見ている女性" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -373,9 +377,9 @@
                         </ul>
                         <div class="hospital__box">
                             <p class="hospital__text">小陰唇は大陰唇の内側に接している左右のヒダであり、小陰唇縮小術は肥大した小陰唇を小さくし、バランスを整える手術です。治療の基準は個々に異なりますので、他人と比較することは難しいですが、患者様ご自身が気になる場合は、一度ご相談いただくことをおすすめいたします。小陰唇が肥大化すると痛みや黒ずみ、垢がたまって悪臭の原因になることがあり、手術によってこれらを改善できます。また、黒ずみの濃い部分を切除しますので、見た目も美しく整います。当院では片方のみの手術も可能であり、アフターケアも丁寧に行っています。</p>
-                            <figure class="hospital__img">
+                            <div class="hospital__img">
                                 <img src="./assets/images/common/shoinshin01.webp" alt="女性器の詳細説明" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                         <table class="hospital__table">
                             <thead>
@@ -443,9 +447,9 @@
                         </ul>
                         <div class="hospital__box hospital__box--width">
                             <p class="hospital__text hospital__text--width">抜糸なしの小陰唇縮小術では、粘膜下を縫い合わせるため縫い糸が目立ちません。また、粘膜下で使用される縫合糸は自然に吸収されるため、手術後の抜糸が不要です。この方法はダウンタイムが短いことが特徴で、個人差はありますが、通常約1週間程度で性交渉が可能となります。</p>
-                            <figure class="hospital__img hospital__img--width">
+                            <div class="hospital__img hospital__img--width">
                                 <img src="./assets/images/common/hospital-img2.webp" alt="女性の下半身" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                         <table class="hospital__table">
                             <thead>
@@ -706,9 +710,9 @@
                                 性交痛の改善
                             </h3>
                         </div>
-                        <figure class="improvement__img">
+                        <div class="improvement__img">
                             <img src="./assets/images/common/improvement1.webp" alt="うつ伏せになっている女性" loading="lazy">
-                        </figure>
+                        </div>
                     </div>
                 </li>
                 <li class="improvement__item">
@@ -718,9 +722,9 @@
                                 尿漏れの改善
                             </h3>
                         </div>
-                        <figure class="improvement__img">
+                        <div class="improvement__img">
                             <img src="./assets/images/common/improvement2.webp" alt="トイレの画像" loading="lazy">
-                        </figure>
+                        </div>
                     </div>
                 </li>
                 <li class="improvement__item">
@@ -731,9 +735,9 @@
                                 緩みの改善
                             </h3>
                         </div>
-                        <figure class="improvement__img">
+                        <div class="improvement__img">
                             <img src="./assets/images/common/improvement3.webp" alt="女性の下半身" loading="lazy">
-                        </figure>
+                        </div>
                     </div>
                 </li>
                 <li class="improvement__item">
@@ -744,9 +748,9 @@
                                 肌質改善・美白効果
                             </h3>
                         </div>
-                        <figure class="improvement__img">
+                        <div class="improvement__img">
                             <img src="./assets/images/common/improvement4.webp" alt="女性の足元" loading="lazy">
-                        </figure>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -784,9 +788,9 @@
                         </ul>
                         <div class="spots-first__box">
                             <p class="spots-first__text">インティマレーザーでは、特定の波長のレーザー光がメラニン色素に直接作用することで黒ずみの軽減が期待できます。この照射でメラニン色素の粒子にエネルギーが吸収されることによって色素が破壊され、体内から排出される過程が促進されます。これによって、黒ずみが徐々に薄くなっていきます。また、インティマレーザーの熱エネルギーは、メラノサイト（メラニン色素を生成する細胞）にも影響を与えます。熱エネルギーの刺激でメラノサイトの活動が抑制されることで、新しいメラニン色素の生成が抑制されます。これにより、黒ずみの再発を防ぐ効果も期待できます。</p>
-                            <figure class="spots-first__img">
+                            <div class="spots-first__img">
                                 <img src="./assets/images/common/spots1.webp" alt="インティマレーザーの機械" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                         <table class="spots-first__table spots-table">
                             <thead>
@@ -863,9 +867,9 @@
                                 この熱エネルギーが膣壁の深部に集中して新しいコラーゲン繊維の生成を促進します。<br>
                                 結果として、膣壁の粘膜の質が向上し、膣の締まりがよくなることが期待できます。
                             </p>
-                            <figure class="spots-back__img">
+                            <div class="spots-back__img">
                                 <img src="./assets/images/common/spots2.webp" alt="女性器の詳細" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                         <table class="spots-first__table spots-table">
                             <thead>
@@ -924,9 +928,9 @@
                             <p class="spots-back__text">
                                 インティマレーザーによる尿漏れ治療の効果としては、「尿漏れの改善」と「尿失禁の予防」が期待されます。尿道周辺の筋肉や組織の強化により、尿漏れの症状が徐々に軽減され、くしゃみや咳、体の動きなどによる尿漏れが減少することが期待されます。また、サポート機能の向上により、尿漏れの発生や重症化を予防する効果が期待され、体に負荷がかかる状況での尿漏れのリスクが減少することが期待できます。
                             </p>
-                            <figure class="spots-back__img spots-back__img--third">
+                            <div class="spots-back__img spots-back__img--third">
                                 <img src="./assets/images/common/spots3.webp" alt="女性器の詳細" loading="lazy">
-                            </figure>
+                            </div>
                         </div>
                         <table class="spots-first__table spots-table">
                             <thead>
@@ -1043,9 +1047,9 @@
     --------------------------------->
     <section class="woman">
         <div class="woman__inner inner">
-            <figure class="woman__img">
+            <div class="woman__img">
                 <img src="./assets/images/common/woman.webp" alt="女性医師の写真" loading="lazy">
-            </figure>
+            </div>
             <div class="woman__sentence">
                 <h2 class="woman__title">
                     当院は知識豊富な女性医師が<br>
@@ -1068,16 +1072,16 @@
                 <h2 class="section-title__jp section-title__jp--font">アクセス</h2>
             </div>
         
-            <figure class="access__img ">
-                <picture loading="lazy">
+            <div class="access__img "> 
+                <picture >
                     <source srcset="./assets/images/common/access.webp" media="(min-width: 768px)">
-                    <img src="./assets/images/common/access-sp.webp" alt="クリニックの受付" loading="lazy">
+                    <img src="./assets/images/common/access-sp.webp" alt="クリニックの受付" >
                 </picture>
-            </figure>
+            </div>
 
             <div class="access__content jp-access">
                 <div class="access__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7286527910633!2d139.6948445763948!3d35.65905647259442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5a42f6fc23%3A0xfc7d0b0d49554f87!2z5riL6LC344GC44GK44Ge44KJ44Kv44Oq44OL44OD44Kv576O5a655aSW56eR44O7576O5a6555qu6Iaa56eR!5e0!3m2!1sja!2sjp!4v1729350676798!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7286527910633!2d139.6948445763948!3d35.65905647259442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5a42f6fc23%3A0xfc7d0b0d49554f87!2z5riL6LC344GC44GK44Ge44KJ44Kv44Oq44OL44OD44Kv576O5a655aSW56eR44O7576O5a6555qu6Iaa56eR!5e0!3m2!1sja!2sjp!4v1729350676798!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <dl class="access__list">
                     <div class="access__item">
@@ -1120,12 +1124,15 @@
     <div class="cta__buttons button button--block">
         <a href="https://lstep.app/XccSwb0" target="_blank">
             <div class="button__box button__box--cta">
-                <img class="button__comment button__comment--cta" src="./assets/images/common/button-text-pink.webp" alt="まずはお気軽にご相談を" loading="lazy">
+                <img class="button__comment button__comment--cta" src="./assets/images/common/button-text-pink.webp" alt="まずはお気軽にご相談を">
                 <button class="button__item button__item--cta">
                     <span>LINEで今すぐ予約</span>
                 </button>
             </div>
         </a>
     </div>  
+
+
+
 </body>
 </html>
