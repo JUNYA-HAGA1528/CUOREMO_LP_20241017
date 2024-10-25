@@ -56,10 +56,16 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
-		window.addEventListener("touchmove", function(event) {}, {passive: true});
-
-	</script>
+      window.addEventListener("scroll", function(event) {
+        // 必要なスクロール処理
+      }, { passive: true });
+    
+      window.addEventListener("touchmove", function(event) {
+        // 必要なタッチスクロール処理
+      }, { passive: true });
+    </script>
     <script defer src="./assets/js/script.js"></script>
+    
 </head>
 <body>
 
