@@ -6,7 +6,7 @@
 
 .method__head{
     color: $white;
-    background-image: url('../images/common/method-bg-sp.png');
+    background-image: url('../images/common/method-bg-sp.webp');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
     position: relative;
     z-index: 2;
     @include mq(md) {
-        background-image: url('../images/common/method-bg.png');
+        background-image: url('../images/common/method-bg.webp');
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -83,7 +83,7 @@
 
 
 .method__content{
-    background-image: url('../images/common/method-bg-gold-sp.png');
+    background-image: url('../images/common/method-bg-gold-sp.webp');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,7 +92,7 @@
     position: relative;
     z-index: 1;
     @include mq(md) {
-        background-image: url('../images/common/method-bg-gold.png');
+        background-image: url('../images/common/method-bg-gold.webp');
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;

@@ -52,7 +52,7 @@
 }
 
 .button__item span::after {
-	background-image: url(../images/common/button-icon.png);
+	background-image: url(../images/common/button-icon.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -114,7 +114,7 @@
 }
 
 .button__item--method span::after {
-	background-image: url(../images/common/method-arrow.png);
+	background-image: url(../images/common/method-arrow.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -157,7 +157,7 @@
 }
 
 .button__item--brown span::after {
-	background-image: url(../images/common/method-arrow-brown.png);
+	background-image: url(../images/common/method-arrow-brown.webp);
     top: 50%;
     right: rem(15);
     width: rem(16);
@@ -234,7 +234,7 @@
 }
 
 .button__item--cta span::after {
-	background-image: url(../images/common/button-icon.png);
+	background-image: url(../images/common/button-icon.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .improvement{
-    background-image: url('../images/common/improvement-bg-sp.png');
+    background-image: url('../images/common/improvement-bg-sp.webp');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@
     position: relative;
     z-index: 1;
     @include mq(md) {
-        background-image: url('../images/common/improvement-bg.png');
+        background-image: url('../images/common/improvement-bg.webp');
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;    

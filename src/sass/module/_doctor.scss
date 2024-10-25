@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .doctor{
-    background-image: url('../images/common/doctor-bg-sp.png');
+    background-image: url('../images/common/doctor-bg-sp.webp');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% rem(430);
@@ -11,7 +11,7 @@
     padding-bottom: 100px;
     z-index: 2;
     @include mq(md) {
-        background-image: url('../images/common/doctor-bg.png');
+        background-image: url('../images/common/doctor-bg.webp');
         background-position: center top;
         background-repeat: no-repeat;
         background-size: 100% rem(718);
